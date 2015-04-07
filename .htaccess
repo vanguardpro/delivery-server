@@ -1,0 +1,18 @@
+# BEGIN Gruppo Modulo Rewrite
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+# Change following path
+RewriteBase /
+
+RewriteRule ^(([A-Za-z0-9]+[_])+[A-Za-z0-9]+[\.][p][h][p])/?$ /cardredirect.php?slug=$1 [L]
+
+RewriteRule ^(([A-Za-z0-9]+[-])+[A-Za-z0-9]+[\.][p][h][p])/?$ /descriptionredirect.php?slug=$1 [L]
+
+
+
+</IfModule>
+
+# END Gruppo Modulo Rewrite
+
+ErrorDocument 404 /404.html
